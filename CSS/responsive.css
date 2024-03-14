@@ -1,0 +1,39 @@
+@media(min-width:1462px) {
+  #pagina {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.6rem;
+  }
+
+  header {
+    grid-column: 1/4;
+  }
+
+  main {
+    grid-column: 1/3;
+  }
+
+  footer {
+    grid-column: 1/4;
+  }
+
+  .botoesAvaliacoes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.2rem;
+  }
+
+  .botoesAvaliacoes {
+    padding-left: 12.0rem;
+  }
+
+  .conteudoPagina>img:nth-child(1) {
+    padding-top: 4.4rem;
+    padding-left: 12.0rem;
+  }
+
+  .conteudoPrincipal .conteudo {
+    padding: 0rem 12.0rem 3.2rem;
+  }
+}

@@ -1,0 +1,177 @@
+:root {
+  font-size: 62.5%;
+}
+
+header img {
+  border-radius: 50%;
+  width: 4.0rem;
+  height: 4.0rem;
+}
+
+:root {
+  font-size: 62.5%;
+  --color: 190;
+  --color-green-500: hsl(var(--color), 91%, 25%);
+  --color-blue-200: hsl(var(--color), 46%, 40%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Mulish';
+}
+
+.cabecalho {
+  background-color: var(--color-green-500);
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.6rem;
+  padding: 1.2rem 2.8rem;
+}
+
+.cabecalho img {
+  height: 4.2rem;
+  width: 4.2rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.campoPesquisa {
+  flex: 1;
+}
+
+.campoPesquisa label {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.campoPesquisa input {
+  width: 100%;
+  padding: 1.6rem;
+  border: 0;
+  border-radius: 0.4rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  opacity: 0.28;
+}
+
+.conteudoPrincipal :nth-child(1) {
+  width: 100%;
+}
+
+.botoesAvaliacoes {
+  padding: 3.1rem 2.2rem;
+}
+
+.botoesAvaliacoes img {
+  padding-top: 0.8rem;
+}
+
+.conteudo {
+  padding: 0 2.4rem;
+}
+
+.pagina-Artigos-relacionados h1 {
+  padding: 3.4rem 2.2rem 3.2rem;
+}
+
+.artigosRelacionaveis {
+  padding: 0 2.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  padding-bottom: 3.2rem;
+}
+
+.artigos h2 {
+  font-size: 1.8rem;
+  padding-bottom: 1.2rem;
+
+}
+
+artigos p {
+  width: 21.5rem;
+  height: 5.4rem;
+}
+
+.rodape {
+  background-color: var(--color-blue-200);
+  padding: 2.6rem 1.6rem;
+}
+
+.rodape p {
+  text-align: center;
+  color: white;
+}
+
+.conteudoPagina:hover img:nth-child(1) {
+  filter: hue-rotate(30deg) contrast(101%) saturate(200%);
+  transform: scale(1);
+}
+
+.conteudoPrincipal img:nth-child(1) {
+  transition-property: all;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
+
+@keyframes move {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+.conteudoPrincipal img:nth-child(1) {
+  animation-name: move;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: initial;
+  animation-fill-mode: forwards;
+}
+
+@keyframes moverCabecalho {
+  from {
+    transform: translateY(var(--moverY));
+  }
+}
+
+.cabecalho {
+  --moverY: -100%;
+  animation-name: moverCabecalho;
+  animation-duration: 1s;
+}
+
+@keyframes mover-fotos-artigos {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+.artigosRelacionaveis {
+  --delay: .4s;
+  animation-name: mover-fotos-artigos;
+  animation-duration: 1.5s;
+  animation-delay: var(--delay);
+  animation-fill-mode: backwards;
+}
